@@ -1,0 +1,51 @@
+
+
+
+<div class="container">
+  <!-- <img class="img" src="../../../assets/background-images/bg-img.jpg"> -->
+&nbsp;
+<div fxLayout="row"  >
+  <button mat-raised-button  class="btn-clr"  (click)="logout()">Logout</button>
+</div>
+&nbsp;
+
+
+  <div class="top">
+
+    <div fxLayout="row" fxLayout.xs="column">
+      <mat-card>
+        <mat-accordion>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelClosedState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="para">
+          About Us
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+            <p class="para">CyBuzzSc Infotech Pvt. Ltd is a boutique customized software development company which is reliable, quality focussed and values commitments. By being open to learning for improvements and adapting to new environments, we innovate and expand by adapting to newer technologies as per the requirement of the market and our clients. We partner, collaborate and work with our clients to strengthen, automate and transform their businesses with the aim of growth and customer satisfaction.</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card>
+      </div>
+
+    <div class="row">
+      <div class="column" >
+        <h2 class="h3">CRM</h2>
+        <img class="img-scm" src="../../../assets/background-images/crm.jpg">
+      </div>
+      <div class="column" >
+        <h2 class="h3">SCM</h2>
+        <img class="img-scm" src="../../../assets/background-images/scm.jpg">
+      </div>
+        <div class="column" >
+        <h2 class="h3">E- Governance</h2>
+        <img class="img-govern" src="../../../assets/background-images/e-govern.jpg">
+      </div>
+
+    </div>
+
+
+  </div>
+  </div>

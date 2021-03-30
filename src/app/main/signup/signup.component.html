@@ -1,0 +1,68 @@
+
+<div class="container">
+  <img class="img" src="../../../assets/background-images/bg-img.jpg">
+
+  <div class="centered">
+
+
+
+  <mat-card>
+    <mat-toolbar class="toolbar-color">
+      <mat-toolbar-row>
+        <span>signup Form </span>
+
+      </mat-toolbar-row>
+      </mat-toolbar>
+      <p></p>
+<form [formGroup]="signupForm"  (ngSubmit)="signUp()" style="text-align: center;">
+
+
+  <div fxLayout="row">
+  <div fxFlex="20"></div>
+  <div fxFlex="60">
+  <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign="center center">
+
+    <mat-form-field appearance="outline">
+      <mat-label> Name</mat-label>
+      <input matInput formControlName="name" type="text" maxlength="15" pattern="[a-zA-Z][a-zA-Z]+" required>
+      <mat-error *ngIf="signupForm.get('name').hasError('required') || signupForm.get('name').hasError('pattern')">
+        Enter a Valid Name
+      </mat-error>
+    </mat-form-field>
+
+
+  </div>
+
+  <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign="center">
+    <mat-form-field appearance="outline" >
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="text" maxlength="40" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
+      <mat-error *ngIf="signupForm.get('email').hasError('required') || signupForm.get('email').hasError('pattern')">
+       Please Enter a Valid Email
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+  <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign="center">
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password" type="password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" required>
+    <mat-error *ngIf="signupForm.get('email').hasError('required') || signupForm.get('email').hasError('pattern')">
+      Password must contain atleast 1 special char
+     </mat-error>
+  </mat-form-field>
+  </div>
+</div>
+<p></p>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+  <button mat-raised-button class="toolbar-color" [disabled]="!signupForm.valid"  type="submit">Submit</button>
+  </div>
+</div>
+<p></p>
+
+ </form>
+
+</mat-card>
+</div>
+</div>
+
